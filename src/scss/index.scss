@@ -1,0 +1,8 @@
+@use "~normalize.css/normalize.css";
+@use "./abstract/mixins" as *;
+@use "./abstract/globales";
+@use "./utils/deviceSize";
+@use "./components/navBar";
+@use "./components/badgeTag";
+@use "./sections/hero";
+
