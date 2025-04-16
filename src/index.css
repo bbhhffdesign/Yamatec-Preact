@@ -324,7 +324,7 @@ template {
 }
 @font-face {
   font-family: "neueBold";
-  src: url("/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainUltrabold.otf") format("woff2");
+  src: url("/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainUltrabold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -339,11 +339,18 @@ h2,
 h3,
 h4 {
   font-family: "neueRegular", sans-serif;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong {
   font-family: "neueBold", sans-serif;
 }
 
 h1 {
-  font-size: 2rem;
+  margin: 0;
+  font-size: clamp(2.5rem, -0.904rem + 17.021vw, 3.5rem);
+  text-shadow: 0px 2px white;
 }
 
 h2 {
@@ -395,22 +402,21 @@ small {
   top: 10svh;
   height: 0.5rem;
   width: 0.5rem;
-  border: 1px solid black;
-  background-color: #fc00b5;
+  border: 1px solid rgb(126, 126, 126);
+}
+@media (min-width: 320px) {
+  .device-size {
+    background-color: rgb(231, 22, 22);
+  }
 }
 @media (min-width: 360px) {
   .device-size {
-    background-color: rgb(218, 86, 86);
+    background-color: rgb(23, 190, 232);
   }
 }
 @media (min-width: 412px) {
   .device-size {
-    background-color: rgb(90, 172, 192);
-  }
-}
-@media (min-width: 480px) {
-  .device-size {
-    background-color: rgb(85, 195, 124);
+    background-color: rgb(16, 249, 98);
   }
 }
 
@@ -450,6 +456,7 @@ small {
   width: -moz-fit-content;
   width: fit-content;
   height: clamp(1.2rem, -0.502rem + 8.511vw, 1.7rem);
+  margin: 1rem 0;
 }
 .badge .tick {
   position: relative;
@@ -491,6 +498,30 @@ small {
       align-items: center;
 }
 
+.gamerguy-container {
+  height: 100%;
+  width: 100vw;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  gap: none;
+}
+.gamerguy-container svg {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
 .hero {
   height: 100svh;
   width: 100%;
@@ -501,11 +532,13 @@ small {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  gap: none;
+  gap: 1.5rem;
+  text-align: center;
+  overflow: hidden;
 }
