@@ -9,9 +9,8 @@ function Hero() {
 
   useEffect(() => {
     textRef.current.style.willChange = "transform, opacity";
-    gsap.fromTo(
+    gsap.to(
       textRef.current,
-      { opacity: 0, y: "10vh" },
       {
         opacity: 1,
         y: 0,
