@@ -1,40 +1,48 @@
-// import { useAnimate } from "motion/react-mini";
-import { motion } from "motion/react";
+import { useRef, useEffect } from "preact/hooks";
+import gsap from "gsap";
 import NavBar from "../components/NavBar";
 import BadgeTag from "../components/BadgeTag";
 import GamerGuySgv from "../components/GamerGuySvg";
 
 function Hero() {
-  // const [scope, animate] = useAnimate();
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    textRef.current.style.willChange = "transform, opacity";
+    gsap.fromTo(
+      textRef.current,
+      { opacity: 0, y: "10vh" },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "power1.out",
+        onComplete: () =>{
+          textRef.current.style.willChange = "auto";
+        }
+      }
+    );
+  }, []);
 
   return (
     <section className="hero">
-      {/* <div className="separator">10% dispositivos</div> */}
       <NavBar />
       <BadgeTag text={"Potenciamos tu PC de Trabajo o Gaming"} />
 
-      <motion.h1
-        className="header-h1"
-        initial={{
-          opacity: 0,
-          transform: "translateY(10vh)",
-        }}
-        animate={{
-          opacity: 1,
-          transform: "translateY(0)",
-        }}
-        transition={{
-          duration: .5,
-          ease: "easeOut",
-          
-        }}
-      >
-        ¿Tu <strong>PC</strong> ya
-        <br />
-        no rinde al
-        <br />
-        <strong>Máximo?</strong>
-      </motion.h1>
+      <div className="hero__text" ref={textRef}>
+        <h1 className="header-h1" >
+          ¿Tu <strong>PC</strong> ya
+          <br />
+          no rinde al
+          <br />
+          <strong>Máximo</strong>?
+        </h1>
+
+        <p>
+          Conectamos a <strong>Profesionales Digitales y Gamers</strong> con
+          soluciones de hardware personalizadas
+        </p>
+      </div>
 
       <GamerGuySgv />
     </section>

@@ -1,28 +1,8 @@
 $clr-principal: #f7931c;
+$clr-rosa: #f95047;
 
 $robotoRegular: 'robotoRegular' , sans-serif;
+$robotoBold: 'robotoBold' , sans-serif;
 $neueRegular: 'neueRegular' , sans-serif;
 $neueBold: 'neueBold' , sans-serif;
 
-@font-face {
-    font-family: 'robotoRegular';
-    src: url('/src/assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-
-@font-face {
-    font-family: 'neueRegular';
-    src: url('/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainRegular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-@font-face {
-    font-family: 'neueBold';
-    src: url('/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainUltrabold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }

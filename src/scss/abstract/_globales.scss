@@ -25,8 +25,9 @@ h4{
 h1{
     margin: 0;
     // font-size: clamp(2rem, -3.106rem + 25.532vw, 3.5rem);
+    line-height: 90%;
     font-size: clamp(2.5rem, -0.904rem + 17.021vw, 3.5rem) ;
-    text-shadow: 0px 2px white;
+    // text-shadow: 0px 2px white;
     // @include apply-typography(h1)
 }
 h2{
@@ -38,8 +39,16 @@ h3{
 h4{
     @include apply-typography(h4);   
 }
+
  p{
     @include apply-typography(p);
+    font-family: $robotoRegular;
+    line-height: 100%;
+    
+    strong{
+        font-family: $robotoBold;
+
+    }
 }
 small{
     @include apply-typography(small);
@@ -49,6 +58,10 @@ small{
     width: 100vw;
     height: auto;
     // overflow-x: hidden;
+}
+section{
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .separator{

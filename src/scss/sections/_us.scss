@@ -1,14 +1,10 @@
 @use "../abstract/variables" as *;
 @use "../abstract/mixins" as *;
 
-.hero{
-    height: 100svh;
-    width: 100%;
+.us{
+    position: relative;
+    height: 300lvh;
     background-color: $clr-principal;
     background-image: url(/src/assets/img/graph-paper-white.webp);
     background-position: right;
-    @include flex(space-between, center, column, $gap: .5rem);
-    text-align: center;
-    overflow: hidden;
-    
 }

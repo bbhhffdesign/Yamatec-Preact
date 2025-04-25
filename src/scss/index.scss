@@ -1,9 +1,13 @@
-@use "~normalize.css/normalize.css";
-@use "./abstract/mixins" as *;
+@use "./abstract/fonts";
+@use "normalize.css/normalize.css";
+@use "./abstract/variables";
+@use "./abstract/mixins";
 @use "./abstract/globales";
 @use "./utils/deviceSize";
 @use "./components/navBar";
 @use "./components/badgeTag";
 @use "./components/gamerGuy";
+@use "./components/marquee";
 @use "./sections/hero";
+@use "./sections/us";
 

@@ -308,27 +308,6 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: "robotoRegular";
-  src: url("/src/assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "neueRegular";
-  src: url("/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainRegular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "neueBold";
-  src: url("/src/assets/fonts/PP_Neue_Machina/PPNeueMachina-PlainUltrabold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 body {
   color: black;
   margin: 0;
@@ -375,6 +354,7 @@ p {
   font-size: clamp(1rem, 0.149rem + 4.255vw, 1.25rem);
   font-weight: 400;
   line-height: 1.6;
+  font-family: "robotoRegular", sans-serif;
 }
 
 small {
@@ -443,7 +423,8 @@ small {
 }
 .nav .nav__logo {
   position: relative;
-  height: inherit;
+  height: 100%;
+  width: auto;
 }
 
 .badge {
@@ -462,11 +443,12 @@ small {
   position: relative;
   z-index: 2;
   width: auto;
-  height: inherit;
+  height: 100%;
 }
 .badge .tick img {
   display: inline;
   height: inherit;
+  width: auto;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
@@ -538,7 +520,7 @@ small {
       align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  gap: 1.5rem;
+  gap: 0.5rem;
   text-align: center;
   overflow: hidden;
 }

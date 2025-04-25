@@ -13,11 +13,12 @@
     position: relative;
     z-index: 2;
     width: auto;
-    height: inherit;
+    height: 100%;
 
     img{
         display: inline;
         height: inherit;
+        width: auto;
         transform: translateX(50%);
     }
 
