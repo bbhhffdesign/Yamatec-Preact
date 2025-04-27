@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "preact/hooks";
+// import { useInView } from 'preact-intersection-observer';
 import gsap from "gsap";
 import NavBar from "../components/NavBar";
 import BadgeTag from "../components/BadgeTag";
@@ -7,29 +8,27 @@ import GamerGuySgv from "../components/GamerGuySvg";
 function Hero() {
   const textRef = useRef(null);
 
+
   useEffect(() => {
-    textRef.current.style.willChange = "transform, opacity";
-    gsap.to(
-      textRef.current,
-      {
+      textRef.current.style.willChange = "transform, opacity";    
+      gsap.to(textRef.current, {
         opacity: 1,
         y: 0,
         duration: 0.5,
         ease: "power1.out",
-        onComplete: () =>{
+        onComplete: () => {
           textRef.current.style.willChange = "auto";
         }
-      }
-    );
-  }, []);
+      });
+    }, []); 
 
   return (
-    <section className="hero">
+    <>
       <NavBar />
       <BadgeTag text={"Potenciamos tu PC de Trabajo o Gaming"} />
 
-      <div className="hero__text" ref={textRef}>
-        <h1 className="header-h1" >
+      <div className="hero__text" ref={textRef} style={{ opacity: 0, transform: "translateY(50px)" }}>
+        <h1 className="header-h1">
           ¿Tu <strong>PC</strong> ya
           <br />
           no rinde al
@@ -44,7 +43,7 @@ function Hero() {
       </div>
 
       <GamerGuySgv />
-    </section>
+    </>
   );
 }
 

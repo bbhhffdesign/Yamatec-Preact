@@ -14,6 +14,14 @@
     .hero__text{
         opacity: 0;
         transform: translateY(10vh);
+        transition: tranform 0.5s ease-out, opacity 0.5s ease-out;
+        
+        &.is-animating{
+            will-change: transform, opacity;
+        }
+        &.is-visible{
+            transform: translateY(0);
+        }
     }
     
 }

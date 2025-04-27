@@ -18,14 +18,14 @@ const Marquee = () =>{
                     marqueeB.current.style.willChange = "transform";
                     marqueeA.current.style.animationPlayState = "running";
                     marqueeB.current.style.animationPlayState = "running";
-                    console.log("entra");
+                    console.log("entra marquee");
                     
                 }else{
                     marqueeA.current.style.animationPlayState = "paused";
                     marqueeB.current.style.animationPlayState = "paused";
                     marqueeA.current.style.willChange = "auto";
                     marqueeB.current.style.willChange = "auto";
-                    console.log("sale");
+                    console.log("sale marquee");
                     
                 }
             })
@@ -37,7 +37,7 @@ const Marquee = () =>{
         // →Si se renderizo, entonces observalo. 
         if(marqueeRef.current){
             observer.observe(marqueeRef.current)
-            console.log("Se ha comenzado de observar el Marquee")
+            // console.log("Se ha comenzado de observar el Marquee")
         }
         
         // (5) Ahora tenemos que crear una funcion de limpieza que se ejecutara cuando el componente 
