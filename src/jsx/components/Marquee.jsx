@@ -18,14 +18,14 @@ const Marquee = () =>{
                     marqueeB.current.style.willChange = "transform";
                     marqueeA.current.style.animationPlayState = "running";
                     marqueeB.current.style.animationPlayState = "running";
-                    console.log("entra marquee");
+                    // console.log("entra marquee");
                     
                 }else{
                     marqueeA.current.style.animationPlayState = "paused";
                     marqueeB.current.style.animationPlayState = "paused";
                     marqueeA.current.style.willChange = "auto";
                     marqueeB.current.style.willChange = "auto";
-                    console.log("sale marquee");
+                    // console.log("sale marquee");
                     
                 }
             })

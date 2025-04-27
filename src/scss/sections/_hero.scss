@@ -10,6 +10,7 @@
     @include flex(space-between, center, column, $gap: .5rem);
     text-align: center;
     overflow: hidden;
+    margin-bottom: 2rem;
 
     .hero__text{
         opacity: 0;

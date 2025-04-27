@@ -23,7 +23,8 @@ function Hero() {
     }, []); 
 
   return (
-    <>
+    <
+    >
       <NavBar />
       <BadgeTag text={"Potenciamos tu PC de Trabajo o Gaming"} />
 

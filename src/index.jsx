@@ -17,17 +17,19 @@ export function App() {
   // const [contactRef, inViewContact] = useObserver();
 
   // Detectar la sección actual
-  useEffect(()=> {
-    if (inViewHero && currentSection !== "hero") {
-      setCurrentSection("hero");
-    } else if (inViewUs && currentSection !== "us") {
-      setCurrentSection("us");
-    // } else if (inViewServices && currentSection !== "services") {
-    //   setCurrentSection("services");
-    // } else if (inViewContact && currentSection !== "contact") {
-    //   setCurrentSection("contact");
+  useEffect(() => {
+    let newSection = null;
+    if (inViewHero) {
+      newSection = "hero";
+    } else if (inViewUs) {
+      newSection = "us";
     }
-  }, [inViewHero, inViewUs])
+  
+    if (newSection !== currentSection) {
+      setCurrentSection(newSection);
+      console.log("Sección actual visible:", newSection);
+    }
+  }, [inViewHero, inViewUs]);
 
   return (
     <>
@@ -48,11 +50,6 @@ export function App() {
       </section> */}
 
       <DeviceSize />
-
-      <div className="current-section">
-        {/* Mostrar la sección activa en pantalla */}
-        Sección actual visible: {currentSection}
-      </div>
     </>
   );
 }
