@@ -14,7 +14,7 @@ const BadgeTag = ({ text }) => {
       x: -100,
       opacity: 0,
       duration: 0.5,
-      ease: "power2.out", // similar a easeOut
+      ease: "power2.out",
       delay: 1.6,
       onComplete : () =>{
         badgeRef.current.style.willChange ="auto";

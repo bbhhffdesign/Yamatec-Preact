@@ -23,7 +23,7 @@ function Hero() {
     }, []); 
 
   return (
-    <
+    <section className="hero"
     >
       <NavBar />
       <BadgeTag text={"Potenciamos tu PC de Trabajo o Gaming"} />
@@ -44,7 +44,7 @@ function Hero() {
       </div>
 
       <GamerGuySgv />
-    </>
+    </section>
   );
 }
 
